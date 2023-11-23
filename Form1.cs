@@ -278,6 +278,12 @@ namespace Modbus_String
             Cursor.Current = Cursors.Default;
         }
 
+        // Tasto di temst
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            new TableDisplay().ShowDialog();
+        }
+
         // Metodo per convertire un hex in stringa (carattere)
         public static string convertHex(String hexString)
         {

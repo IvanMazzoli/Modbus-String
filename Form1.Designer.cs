@@ -77,6 +77,7 @@
             label37 = new Label();
             groupBox1 = new GroupBox();
             label5 = new Label();
+            btnTable = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -166,9 +167,9 @@
             // 
             // btnReadFromModbus
             // 
-            btnReadFromModbus.Location = new Point(259, 83);
+            btnReadFromModbus.Location = new Point(256, 75);
             btnReadFromModbus.Name = "btnReadFromModbus";
-            btnReadFromModbus.Size = new Size(94, 29);
+            btnReadFromModbus.Size = new Size(74, 29);
             btnReadFromModbus.TabIndex = 15;
             btnReadFromModbus.Text = "Leggi";
             btnReadFromModbus.UseVisualStyleBackColor = true;
@@ -176,9 +177,9 @@
             // 
             // btnWriteToModbus
             // 
-            btnWriteToModbus.Location = new Point(391, 83);
+            btnWriteToModbus.Location = new Point(337, 75);
             btnWriteToModbus.Name = "btnWriteToModbus";
-            btnWriteToModbus.Size = new Size(94, 29);
+            btnWriteToModbus.Size = new Size(74, 29);
             btnWriteToModbus.TabIndex = 16;
             btnWriteToModbus.Text = "Scrivi";
             btnWriteToModbus.UseVisualStyleBackColor = true;
@@ -197,6 +198,7 @@
             // 
             txtReg1.Location = new Point(67, 156);
             txtReg1.Name = "txtReg1";
+            txtReg1.ReadOnly = true;
             txtReg1.Size = new Size(90, 27);
             txtReg1.TabIndex = 18;
             txtReg1.TabStop = false;
@@ -205,6 +207,7 @@
             // 
             txtReg2.Location = new Point(67, 189);
             txtReg2.Name = "txtReg2";
+            txtReg2.ReadOnly = true;
             txtReg2.Size = new Size(90, 27);
             txtReg2.TabIndex = 20;
             txtReg2.TabStop = false;
@@ -222,6 +225,7 @@
             // 
             txtReg3.Location = new Point(67, 222);
             txtReg3.Name = "txtReg3";
+            txtReg3.ReadOnly = true;
             txtReg3.Size = new Size(90, 27);
             txtReg3.TabIndex = 22;
             // 
@@ -238,6 +242,7 @@
             // 
             txtReg4.Location = new Point(67, 255);
             txtReg4.Name = "txtReg4";
+            txtReg4.ReadOnly = true;
             txtReg4.Size = new Size(90, 27);
             txtReg4.TabIndex = 24;
             // 
@@ -254,6 +259,7 @@
             // 
             txtReg8.Location = new Point(224, 255);
             txtReg8.Name = "txtReg8";
+            txtReg8.ReadOnly = true;
             txtReg8.Size = new Size(90, 27);
             txtReg8.TabIndex = 40;
             // 
@@ -270,6 +276,7 @@
             // 
             txtReg7.Location = new Point(224, 222);
             txtReg7.Name = "txtReg7";
+            txtReg7.ReadOnly = true;
             txtReg7.Size = new Size(90, 27);
             txtReg7.TabIndex = 38;
             // 
@@ -286,6 +293,7 @@
             // 
             txtReg6.Location = new Point(224, 189);
             txtReg6.Name = "txtReg6";
+            txtReg6.ReadOnly = true;
             txtReg6.Size = new Size(90, 27);
             txtReg6.TabIndex = 36;
             // 
@@ -302,6 +310,7 @@
             // 
             txtReg5.Location = new Point(224, 156);
             txtReg5.Name = "txtReg5";
+            txtReg5.ReadOnly = true;
             txtReg5.Size = new Size(90, 27);
             txtReg5.TabIndex = 34;
             // 
@@ -318,6 +327,7 @@
             // 
             txtReg12.Location = new Point(395, 254);
             txtReg12.Name = "txtReg12";
+            txtReg12.ReadOnly = true;
             txtReg12.Size = new Size(90, 27);
             txtReg12.TabIndex = 56;
             // 
@@ -334,6 +344,7 @@
             // 
             txtReg11.Location = new Point(395, 221);
             txtReg11.Name = "txtReg11";
+            txtReg11.ReadOnly = true;
             txtReg11.Size = new Size(90, 27);
             txtReg11.TabIndex = 54;
             // 
@@ -350,6 +361,7 @@
             // 
             txtReg10.Location = new Point(395, 188);
             txtReg10.Name = "txtReg10";
+            txtReg10.ReadOnly = true;
             txtReg10.Size = new Size(90, 27);
             txtReg10.TabIndex = 52;
             // 
@@ -366,6 +378,7 @@
             // 
             txtReg9.Location = new Point(395, 155);
             txtReg9.Name = "txtReg9";
+            txtReg9.ReadOnly = true;
             txtReg9.Size = new Size(90, 27);
             txtReg9.TabIndex = 50;
             // 
@@ -382,6 +395,7 @@
             // 
             txtReg16.Location = new Point(565, 255);
             txtReg16.Name = "txtReg16";
+            txtReg16.ReadOnly = true;
             txtReg16.Size = new Size(90, 27);
             txtReg16.TabIndex = 72;
             // 
@@ -398,6 +412,7 @@
             // 
             txtReg15.Location = new Point(565, 222);
             txtReg15.Name = "txtReg15";
+            txtReg15.ReadOnly = true;
             txtReg15.Size = new Size(90, 27);
             txtReg15.TabIndex = 70;
             // 
@@ -414,6 +429,7 @@
             // 
             txtReg14.Location = new Point(565, 189);
             txtReg14.Name = "txtReg14";
+            txtReg14.ReadOnly = true;
             txtReg14.Size = new Size(90, 27);
             txtReg14.TabIndex = 68;
             // 
@@ -430,6 +446,7 @@
             // 
             txtReg13.Location = new Point(565, 156);
             txtReg13.Name = "txtReg13";
+            txtReg13.ReadOnly = true;
             txtReg13.Size = new Size(90, 27);
             txtReg13.TabIndex = 66;
             // 
@@ -444,7 +461,7 @@
             // 
             // txtString
             // 
-            txtString.Location = new Point(259, 32);
+            txtString.Location = new Point(260, 39);
             txtString.MaxLength = 32;
             txtString.Name = "txtString";
             txtString.Size = new Size(226, 27);
@@ -462,7 +479,7 @@
             // label37
             // 
             label37.AutoSize = true;
-            label37.Location = new Point(259, 9);
+            label37.Location = new Point(260, 16);
             label37.Name = "label37";
             label37.Size = new Size(197, 20);
             label37.TabIndex = 83;
@@ -487,11 +504,22 @@
             label5.TabIndex = 0;
             label5.Text = "Un altro software\r\nscritto da Ivan ;)\r\nIvanMazzoli @ GH\r\n";
             // 
+            // btnTable
+            // 
+            btnTable.Location = new Point(417, 75);
+            btnTable.Name = "btnTable";
+            btnTable.Size = new Size(74, 29);
+            btnTable.TabIndex = 85;
+            btnTable.Text = "Tabella";
+            btnTable.UseVisualStyleBackColor = true;
+            btnTable.Click += btnTest_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(676, 300);
+            Controls.Add(btnTable);
             Controls.Add(groupBox1);
             Controls.Add(label37);
             Controls.Add(label36);
@@ -540,7 +568,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtIpAddress);
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Modbus String";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -614,5 +644,6 @@
         private TextBox txtReg14;
         private TextBox txtReg13;
         private Label label5;
+        private Button btnTable;
     }
 }
