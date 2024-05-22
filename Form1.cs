@@ -332,5 +332,57 @@ namespace Modbus_String
                 e.Handled = true;
             }
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+
+            // Divido la stringa ogni due caratteri
+            List<String> chunks = new List<String>();
+            for (int i = 0; i < txtString.Text.Length; i += 2)
+            {
+                if (i + 2 <= txtString.Text.Length)
+                {
+                    chunks.Add(txtString.Text.Substring(i, 2));
+                }
+                else
+                {
+                    chunks.Add(txtString.Text.Substring(i));
+                }
+            }
+
+            // Scrivo 16 registri (32 char) a partire dallo startAddress
+            try
+            {
+                int index = 0;
+                // Itero tutti i pezzi di stringa
+                foreach (String chunk in chunks)
+                {
+                    string hex1 = ((int)chunk[0]).ToString("X2");
+                    string hex2 = "0";
+                    if (chunk.Length > 1)
+                    {
+                        hex2 = ((int)chunk[1]).ToString("X2");
+                    }
+                    string temphex = hex1 + hex2;
+                    int value = Convert.ToInt32(temphex, 16);
+                    registerLabels[index].Text = ("+ " + index).ToString();
+                    registerValues[index].Text = value.ToString();
+                    index++;
+                }
+
+                // Se non ho scritto tutti i 16 registri riempio quelli rimanenti con 0
+                while (index < 16)
+                {
+                    registerLabels[index].Text = ("+ " + index).ToString();
+                    registerValues[index].Text = "0";
+                    index++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante la generazione dei registri Modbus. " + ex.ToString(), "Errore di generazione", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

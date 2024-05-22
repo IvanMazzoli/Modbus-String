@@ -11,6 +11,7 @@
     <Authors>Ivan Mazzoli</Authors>
     <Company />
     <Copyright>2023</Copyright>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>

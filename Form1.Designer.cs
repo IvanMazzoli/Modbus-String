@@ -78,6 +78,7 @@
             groupBox1 = new GroupBox();
             label5 = new Label();
             btnTable = new Button();
+            btnGenerate = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -167,9 +168,9 @@
             // 
             // btnReadFromModbus
             // 
-            btnReadFromModbus.Location = new Point(256, 75);
+            btnReadFromModbus.Location = new Point(260, 62);
             btnReadFromModbus.Name = "btnReadFromModbus";
-            btnReadFromModbus.Size = new Size(74, 29);
+            btnReadFromModbus.Size = new Size(110, 29);
             btnReadFromModbus.TabIndex = 15;
             btnReadFromModbus.Text = "Leggi";
             btnReadFromModbus.UseVisualStyleBackColor = true;
@@ -177,9 +178,9 @@
             // 
             // btnWriteToModbus
             // 
-            btnWriteToModbus.Location = new Point(337, 75);
+            btnWriteToModbus.Location = new Point(260, 97);
             btnWriteToModbus.Name = "btnWriteToModbus";
-            btnWriteToModbus.Size = new Size(74, 29);
+            btnWriteToModbus.Size = new Size(110, 29);
             btnWriteToModbus.TabIndex = 16;
             btnWriteToModbus.Text = "Scrivi";
             btnWriteToModbus.UseVisualStyleBackColor = true;
@@ -461,7 +462,7 @@
             // 
             // txtString
             // 
-            txtString.Location = new Point(260, 39);
+            txtString.Location = new Point(260, 32);
             txtString.MaxLength = 32;
             txtString.Name = "txtString";
             txtString.Size = new Size(226, 27);
@@ -479,18 +480,18 @@
             // label37
             // 
             label37.AutoSize = true;
-            label37.Location = new Point(260, 16);
+            label37.Location = new Point(260, 9);
             label37.Name = "label37";
-            label37.Size = new Size(197, 20);
+            label37.Size = new Size(229, 20);
             label37.TabIndex = 83;
-            label37.Text = "Stringa Industry 4.0 (32 char)";
+            label37.Text = "Stringa Industry 4.0 (32 char max)";
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label5);
             groupBox1.Location = new Point(505, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(159, 100);
+            groupBox1.Size = new Size(159, 114);
             groupBox1.TabIndex = 84;
             groupBox1.TabStop = false;
             groupBox1.Text = "Info";
@@ -498,7 +499,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(15, 27);
+            label5.Location = new Point(16, 33);
             label5.Name = "label5";
             label5.Size = new Size(131, 60);
             label5.TabIndex = 0;
@@ -506,19 +507,30 @@
             // 
             // btnTable
             // 
-            btnTable.Location = new Point(417, 75);
+            btnTable.Location = new Point(376, 97);
             btnTable.Name = "btnTable";
-            btnTable.Size = new Size(74, 29);
+            btnTable.Size = new Size(110, 29);
             btnTable.TabIndex = 85;
             btnTable.Text = "Tabella";
             btnTable.UseVisualStyleBackColor = true;
             btnTable.Click += btnTest_Click;
+            // 
+            // btnGenerate
+            // 
+            btnGenerate.Location = new Point(375, 62);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(110, 29);
+            btnGenerate.TabIndex = 86;
+            btnGenerate.Text = "Genera valori";
+            btnGenerate.UseVisualStyleBackColor = true;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(676, 300);
+            Controls.Add(btnGenerate);
             Controls.Add(btnTable);
             Controls.Add(groupBox1);
             Controls.Add(label37);
@@ -568,6 +580,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtIpAddress);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -645,5 +658,6 @@
         private TextBox txtReg13;
         private Label label5;
         private Button btnTable;
+        private Button btnGenerate;
     }
 }
